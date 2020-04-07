@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <title>Contact Us</title>
+</head>
+<body onload="getDate()">
+        <header>
+                <div class="container-fluid">
+                    <nav class="navbar navbar-dark navbar-expand-lg">
+                     <div class="container">
+                         <a href="index.html" class="navbar-brand">Steadfast Corners</a>
+                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                     <span class="navbar-toggler-icon"></span></button>
+             <div class="collapse navbar-collapse" id="navbarSupportedContent">
+             <ul class="navbar-nav ml-auto">
+                 <li class="nav-item">
+                     <a href="index.html" class="nav-link">Home</a>
+                 </li>
+                 <li class="nav-item">
+                     <a href="products.html" class="nav-link">Products</a>
+                 </li>
+                 <li class="nav-item active">
+                     <a href="contact.html" class="nav-link">Contact Us</a>
+                 </li>
+             </ul>
+             </div>
+             </div>
+                    
+         
+                 </nav>
+                </div>
+             </header>
+
+
+            <div class="main3">
+                    <div class="container">
+                                        <h2>Step Up Your Career</h2>
+                        </div>
+
+            </div>
+
+
+            
+                    <div class="container mt-5">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                    <div id="emailDiv" class="form-group">
+                                            <p style="text-align: right"><button name="addButton" onclick="addEmail()" class="badge badge-pill badge-secondary">Add</button></p>         
+                                            <label for="emailInput">Email address</label> 
+                                            <input type="email" class="form-control" id="emailInput" placeholder="name@example.com">                                   
+                                          </div>
+            
+                            </div>
+                            <div class="col-lg-6">
+                                    <div class="form-group">
+                                            <p>Send To:</p>
+                                            <div class="form-check form-check-inline">
+                                                <button onclick="changeReciever(0)" class="btn btn-secondary">Human Resources</button>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <button onclick="changeReciever(1)" class="btn btn-secondary">Customer Service</button>
+                                              </div>
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                            <label for="RecieverInput">Reciever Address</label> 
+                                            <input type="email" class="form-control" id="RecieverInput" value="HR.stead@gmail.com" readonly>
+                                          </div>
+
+                                          <div class="form-group">
+                                              <label for="dateInput">Date</label> 
+                                              <input class="form-control" id="dateInput" readonly>
+                                            </div>
+                                        </div>
+                            </div>
+
+
+                           
+                        <div id="commentDiv" class="form-group">
+                                <label for="exampleFormControlTextarea1">Comment  <button class="btn btn-primary ml-4" ondblclick="createAttachment(this)">Add Attachment</button></label>
+                                <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Comment..." rows="3"></textarea>
+                              </div>
+                            <button type="submit" class="btn btn-success mb-5">Send</button>  
+                    </div>
+                    
+    <script src="jquery-3.3.1.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+    <script>
+
+
+    //When the page loads the date will be collected and a substring will be inserted into the input for the date
+    function getDate(){
+      let date = new Date();
+      let dateInput = date.toString();
+      //console.log(dateInput);
+      dateInput = dateInput.substr(0,16);
+      //console.log(dateInput);
+      let dateInputForm = document.getElementById("dateInput");
+      dateInputForm.value = dateInput;
+    } 
+
+    //Changes the email address that the content will be sent to
+    let RecieverInput = document.getElementById("RecieverInput");
+    let recievers = {
+        "HumanResources": "HR.stead@gmail.com",
+        "CustomerService": "CS.stead@gmail.com",
+    };
+    function changeReciever(i) {
+      // console.log(i);
+      switch (i) {
+          case 0: RecieverInput.value = recievers.HumanResources;
+          break;
+          case 1: RecieverInput.value = recievers.CustomerService;
+          break;  
+      default: console.log("A Reciever was not successfully selected");
+          break;
+      }
+    }
+
+    //Creating a new email input
+    let emailDiv = document.getElementById('emailDiv');
+    let inputAttributes = ["email", "name@example.com", "form-control"];
+    emailCount = 1;
+    addButton = document.getElementsByName("addButton")[0];
+    function addEmail(){
+        if(emailCount != 3){
+      let emailLabel = document.createElement('label');
+      let emailInput = document.createElement('input');
+      emailLabel.innerText = "Email address";
+      emailLabel.for = emailInput;
+      emailInput.type = inputAttributes[0];
+      emailInput.placeholder = inputAttributes[1];
+      emailInput.className = inputAttributes[2];
+      // console.log(emailLabel);
+      // console.log(emailInput);
+      // console.log(addParagraph);
+      // console.log(addButton);
+      emailDiv.appendChild(emailLabel);
+      emailDiv.appendChild(emailInput);
+      emailCount++;
+      if(emailCount==3){
+        addButton.style.display = "none";
+      }
+        }
+    }
+    
+    //Inserting a new input before the comment input
+    let commentDiv = document.getElementById('commentDiv');
+    function createAttachment(but){
+      let attachInput = document.createElement('input');
+      attachInput.type = "text";
+      attachInput.placeholder = "Drag Attachment Here...";
+      attachInput.className = "form-control mb-2";
+      commentDiv.insertBefore(attachInput, commentDiv.lastElementChild);
+      but.style.display = "none";
+    }
+
+
+    </script>
+</body>
+</html>

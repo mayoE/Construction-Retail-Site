@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <title>Steadfast Corners</title>
+</head>
+<body>
+    <!-- The Navigation Bar -->
+    <header>
+       <div class="container-fluid">
+           <nav class="navbar navbar-dark navbar-expand-lg">
+            <div class="container">
+                <a href="index.html" class="navbar-brand">Steadfast Corners</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span></button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+            <a href="index.html" class="nav-link">Home</a>
+        </li>
+        <li class="nav-item">
+            <a href="products.html" class="nav-link">Products</a>
+        </li>
+        <li class="nav-item">
+            <a href="contact.html" class="nav-link">Contact Us</a>
+        </li>
+    </ul>
+    </div>
+    </div>
+        </nav>
+       </div>
+    </header>
+
+
+    
+    <!-- Introduction -->
+    <section class="main">
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-sm-6">
+                        <h2>SafeGuarding The Future</h2>
+                        <p>Our Mission is to harness the latest in safety innovation in order to ensure everyone gets home safe and sound, while also providing the highest
+                            level of quality and customer satisfaction.
+                        </p>
+                        <p id="hiddenParagraph" style="display: none">We excel in our fields of work and focus on the smallest of details to reassure pure excellence
+                            in our work.
+                        </p>
+                            <button class="btn" onclick="showParagraph()">Read More</button>
+                    </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+   <!-- Pictures -->
+    <div class="container text-center pt-4 mt-3">
+            <div class="row">
+                <div class="col-4">
+                    <img src="media/safety_sign.jpg" alt="img" class="img-fluid">
+                </div>
+                <div class="col-4">
+                        <img src="media/bulb.png" alt="img" class="img-fluid">
+                    </div>
+                    <div class="col-4">
+                        <img src="media/Graduate.png" alt="img" class="img-fluid" style="padding-top: 30px"> 
+                    </div>
+            </div>
+    </div>
+    <!-- Text Under Pictures -->
+    <div class="container text-center pt-4">
+            <div id="picturesText" class="row py-5">
+                <div  class="col-4">
+                    <p>
+                        We believe in safety technology and the lives it saves. We ensure that every step is towards 
+                        a better future in road safety so that every life saved counts.
+                    </p>
+                 </div>
+                 <div class="col-4">
+                        <p>
+                            We use the latest innovations in safety technology to reach the goals we set out for. No cutting
+                            corners in the work we do to provide the best in the industry.
+                        </p>
+                     </div>
+                     <div class="col-4">
+                            <p>
+                            We provide the best service on the market with our seasoned engineers and recruit the latest 
+                            in graduates to have a fresh approach at all times.
+                            
+                            </p>
+                         </div>
+            </div>
+        </div>
+ 
+     <!-- Cards with Image    -->
+    <div class="container" id="detailDiv">
+            <div id="imageDiv">
+                <img style="display: none" id="image1" src="media/img11.jpg" alt="image" class="img-fluid">
+            </div>
+            <div id="text1" class="card-group">
+                    <div id="card1" class="card">
+                        <div class="card-header bg-primary text-light">Mechanism</div>
+                    <div class="card-body">Our Rolling Safety Barriers uses a triple absorption mechanism to defuse the force and applies a rotation movement to guid the vehicle forward instead
+                        of allowing it to stop.
+                    </div>
+                     <div class="card-footer bg-primary text-light"><button class="btn btn-primary" onclick="changeDetails(0)">See More</button></div>
+                     </div>
+                     <div id="card2" class="card">
+                         <div class="card-header bg-primary text-light">Stats</div>
+                     <div class="card-body">Barriers decrease the chance of fatal collisions by 85% and then does some more protecting
+                         and stuff that makes it safer, some more words, and here are some stats for that kind of stuff.
+                     </div>
+                      <div class="card-footer bg-primary text-light"><button class="btn btn-primary" onclick="changeDetails(1)">See More</button></div>
+                     </div>
+                     </div>   
+        </div>
+        <!-- Contact Info -->
+        <div class="container">
+                <div class="row mt-5 mb-5">
+                    <div class="col-4" style="text-align: center">
+                        <h1>Contact Us</h1>
+                        <p>Visit Us <a href="contact.html">Here</a> to learn 
+                            more about us!
+                            </p>
+                    </div>
+                    <div class="col-8 mt-3">
+                        <p id="exPar" style="text-align: center"> Check us out on social media for updates and
+                                events!
+                             <br><br>
+                                <a href="https://www.facebook.com/LCUuniversity" target="_blank" title="Facebook"><img src="media/Facebook.png" alt="facebook"  height ="50" width="50"></a>
+                                <a href="https://twitter.com/lcuuniversity" target="_blank" title="Twitter"><img src="media/twitter.png" alt="twitter"  height ="50" width="50"></a>
+                                <a href="https://instagram.com/lcuuniversity/" target="_blank" title="Instagram"><img src="media/instagram.png" alt="instagram"  height ="50" width="50"></a>
+                           
+                        </p>
+                        </div>
+                </div>
+            </div>
+
+    <script src="jquery-3.3.1.min.js"></script>
+    <script src="bootstrap.min.js"></script>  
+    <script>
+    "use strict";
+
+    // TimeOut timer to show the window confirm alert that takes the user to the products page
+        function alertFunction(){
+        let checkProducts = window.confirm("Check Out Our Products!!");
+        if (checkProducts == true){
+        window.open("products.html");
+            }
+        }
+    let alertPopUp = window.setTimeout(alertFunction, 8000);
+    
+    // The function that shows the paragraph when the read more button is pressed
+    let hiddenParagraph = document.getElementById("hiddenParagraph");
+    let readMoreButtonDivision = hiddenParagraph.parentElement;
+    let readMoreButton = readMoreButtonDivision.lastElementChild;    
+        function showParagraph(){
+            hiddenParagraph.style.display = "block";
+            readMoreButton.style.display = "none";
+        }
+
+    //Listeners placed onto the divisions with mouse events in order to move them up and down
+    //when the mouse hovers over them.
+        let textParagraphs = document.querySelectorAll("#picturesText > div"); 
+        for (let index = 0; index < textParagraphs.length; index++) {
+        textParagraphs[index].addEventListener("mouseover", function(){
+            this.style.transform = "translateY(-10px)";
+        })
+    }
+        for (let index = 0; index < textParagraphs.length; index++) {
+        textParagraphs[index].addEventListener("mouseout", function(){
+            this.style.transform = "translateY(10px)";
+        })
+    }
+
+    //Cards and Image
+    let image1 = document.getElementById('image1');
+    let text1 = document.getElementById('text1');
+    let card1 = document.getElementById('card1');
+    let card2 = document.getElementById('card2');
+    let imageStyle = image1.getAttribute("style");
+    //console.log(imageStyle);
+    let movedBefore = false;
+    function changeDetails(i){
+        
+        if(movedBefore == false){
+            if(i == 0){
+            card2.style.display = "none";
+            image1.src = "media/Rollers2.jpg";   
+            }else{
+            card1.style.display = "none";  
+            image1.src = "media/NightSafety.jpg"; 
+            }
+            imageStyle = imageStyle.replace("none", "block");
+            image1.setAttribute("style", imageStyle);
+            movedBefore = true;
+        }else{
+            card2.style.display = "block";
+            card1.style.display = "block";  
+            movedBefore = false;
+            imageStyle = imageStyle.replace("block", "none");
+            image1.setAttribute("style", imageStyle);
+        }
+    }
+
+    let exVisible = false;
+    let exPar = document.getElementById("exPar");
+    function exclamation(){
+    if(exVisible==false){
+    exPar.style.fontWeight = "bold";
+    exPar.style.color = "red";
+    exVisible = true;
+    }else{
+    exPar.style.color = "black";
+    exPar.style.fontWeight = "normal";
+    exVisible = false;
+    }
+    }
+    let exclamationTimer = window.setInterval(exclamation , 500);
+    </script>
+</body>
+</html>

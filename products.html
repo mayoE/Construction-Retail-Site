@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <title>Products</title>
+</head>
+<body>
+       <!-- Nav Bar -->
+        <header>
+                <div class="container-fluid">
+                    <nav class="navbar navbar-dark navbar-expand-lg">
+                     <div class="container">
+                         <a href="index.html" class="navbar-brand">Steadfast Corners</a>
+                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                     <span class="navbar-toggler-icon"></span></button>
+             <div class="collapse navbar-collapse" id="navbarSupportedContent">
+             <ul class="navbar-nav ml-auto">
+                 <li class="nav-item">
+                     <a href="index.html" class="nav-link">Home</a>
+                 </li>
+                 <li class="nav-item active">
+                     <a href="products.html" class="nav-link">Products</a>
+                 </li>
+                 <li class="nav-item">
+                     <a href="contact.html" class="nav-link">Contact Us</a>
+                 </li>
+             </ul>
+             </div>
+             </div>
+                    
+         
+                 </nav>
+                </div>
+             </header>
+
+             <!-- Top Image -->
+            <div class="main2">
+                    <div class="container">
+                                        <h2>Top Of The Line</h2>
+                    </div>
+            </div>
+            <!-- Second Nav Bar -->
+            <nav class="navbar nav-tabs navbar-expand-lg navbar-light bg-top pt-3 mb-2">
+                    <div class="container">
+                      <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                        <a class="nav-link" style="color: #007bff">Barriers</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link">Lights</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link">Signs</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link">Radars</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link">Best Sellers</a>
+                        </li>
+                      </ul>
+                      <form class="form-inline my-2 my-lg-0 pr-5">
+                        <input id="searchInput" onkeyup="search()" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                      </form>
+                      <button class="btn btn-primary" onclick="showOrders(this)">Orders</button>
+                    </div>
+                  </nav>
+
+
+
+                  <!-- Products -->
+                  <div class="container" id="contentDiv">
+                    
+                    <span id="item1">
+                          <img src="media/platformbarriers.jpg" alt="Platform Barrier" class="img-fluid" style="margin-bottom: 5px;">
+                          <div class="text-center"><a href="#">Platform Barrier</a></div>
+                          <p class="text-center">$125.00/barrier</p>
+                    </span>
+                    <span id="item2">
+                          <img src="media/Concretestepbarrier.jpg" alt="Step barrier" class="img-fluid" style="margin-bottom: 5px;">
+                          <div class="text-center"><a href="#">Concrete Step Barrier</a></div>
+                          <p class="text-center">$400.00/meter</p>
+                    </span>
+                    <span id="item3">
+                          <img src="media/content7.jpg" alt="Necklace" class="img-fluid" style="margin-bottom: 5px;">
+                          <div class="text-center"><a href="#">Pillar Barrier</a></div>
+                          <p class="text-center">$370.00/barrier</p>
+                    </span>
+                  
+                  
+                    <span id="item4">
+                          <img src="media/content4.jpg" alt="Watch" class="img-fluid" style="margin-bottom: 5px;">
+                          <div class="text-center"><a href="#">Steel Blockers</a></div>
+                          <p class="text-center">$205.00/blocker</p>
+                    </span>
+                    <span id="item5">
+                          <img src="media/content5.jpg" alt="Earing" class="img-fluid" style="margin-bottom: 5px;">
+                          <div class="text-center"><a href="#">Concrete Blockers</a></div>
+                          <p class="text-center">$115.00/blocker</p>
+                    </span>
+                    <span id="item6">
+                          <img src="media/content6.jpg" alt="Shoes" class="img-fluid" style="margin-bottom: 5px;">
+                          <div class="text-center"><a href="#">White Black Stripped Blocker</a></div>
+                          <p class="text-center">$125.00/blocker</p>
+                    </span>      
+                  
+                    <span id="item7">
+                          <img src="media/content3.jpg" alt="Shoes" class="img-fluid" style="margin-bottom: 5px;">
+                          <div class="text-center"><a href="#">Rolling Saftey Barrier</a></div>
+                          <p class="text-center">$110.00/meter</p>
+                    </span>
+                    <span id="item8">
+                        <img src="media/content8.jpg" alt="Shoes" class="img-fluid" style="margin-bottom: 5px;">
+                        <div class="text-center"><a href="#">Plastic Barrier</a></div>
+                        <p class="text-center">$125.00/barrier</p>
+
+                    </span>      
+                    <span id="item9">
+                        <img src="media/content9.jpg" alt="Shoes" class="img-fluid" style="margin-bottom: 5px;">
+                        <div class="text-center"><a href="#">Steel Beam Barrier</a></div>
+                        <p class="text-center">$230.00/meter</p>
+                    </span>
+          </div>
+
+          <!-- Pagination -->
+            <nav style="margin-top: 10px;" id="contentPage">
+                    <ul class="pagination justify-content-center">
+                      <li class="page-item disabled">
+                        <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+                      </li>
+                      <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                      <li class="page-item"><a class="page-link" href="#">2</a></li>
+                      <li class="page-item"><a class="page-link" href="#">3</a></li>
+                      <li class="page-item"><a class="page-link" href="#">>></a></li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">Next</a>
+                      </li>
+                    </ul>
+                  </nav>
+                  <!-- Buy -->
+                  <div id="purchaseDiv" style="display: none">
+                    <div class="container mt-5 text-center">
+                        <img src="" alt="Picture" id="sellImage" class="img-fluid">
+                        <br>
+                          <span>Quantity: </span><input type="number" id="quantityInput" class="mt-3" placeholder="0" min="0">
+                          <p id="costOfProd">Cost: $125.00/barrier</p>
+                          <p id="totalOfProd">Total: $0</p>
+                      <button id="orderButton" class="btn btn-success" onclick="order()">Order</button>
+                      
+                      
+                    </div>
+                  </div>
+
+                  <div id="ordersDiv" style="display: none;" class="my-5 container">
+                    <table class="table">
+                      <thead>
+                        <tr>
+                          <th scope="col">Product Name</th>
+                          <th scope="col">Quantity</th>
+                          <th scope="col">Price</th>
+                          <th scope="col">Total</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                      </tbody>
+                    </table>
+                  </div>
+
+    <script src="jquery-3.3.1.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+    <script>
+        "use strict";
+
+      //To change the active link in the second naviagtion bar
+      let navigationCategories = document.getElementsByTagName("a");
+      // console.log(navigationCategories[4]);
+      // console.log(navigationCategories[8]);
+      for (let i = 4; i <= 8; i++) {
+          navigationCategories[i].addEventListener("mousedown", function(){
+          this.style.color = "#007bff";
+          for (let j = 4; j <= 8; j++) {
+            if(j!=i){
+              navigationCategories[j].style.color = "rgba(0,0,0,.5)";
+            }
+          }
+        })
+      }
+
+      //The search function
+      let searchInput = document.getElementById("searchInput");
+      let searchItems = document.querySelectorAll("#contentDiv>span>div>a");
+      //console.log(searchItems);
+      function search(){
+        let searchVal = searchInput.value;
+        for (let i = 0; i < searchItems.length; i++) {
+        if(searchItems[i].innerText.toLocaleLowerCase().indexOf(searchVal.trim().toLocaleLowerCase())==-1){
+            let hidenameDivision = searchItems[i].parentElement;
+            hidenameDivision.parentElement.style.display = "none";
+            //console.log(hidenameDivision);
+        }else{
+          let shownameDivision = searchItems[i].parentElement;
+            shownameDivision.parentElement.style.display = "block";
+            //console.log(shownameDivision);
+        }
+    }}
+
+
+    //Ordering
+    let images = document.getElementsByTagName("img");
+    let costOfProd = document.getElementById("costOfProd");
+    let totalOfProd = document.getElementById("totalOfProd");
+    let sellImage = document.getElementById("sellImage");
+    let quantityInput = document.getElementById("quantityInput");
+    let totalSum = 0;
+    let contentDiv = document.getElementById("contentDiv");
+    let contentPage = document.getElementById("contentPage");
+    let purchaseDiv = document.getElementById("purchaseDiv");
+    let ordersDiv = document.getElementById("ordersDiv");
+    let itemName;
+    let itemCost;
+    for (let k = 0; k < images.length-1; k++) {
+      images[k].addEventListener("mousedown", function(){
+        let spanE = images[k].parentElement;
+        itemCost = spanE.lastElementChild.innerText;
+        itemName = images[k].nextElementSibling.innerText;
+        costOfProd.innerText = "Cost: " + itemCost;
+        sellImage.src = images[k].src;
+        contentDiv.style.display ="none";
+        contentPage.style.display ="none";
+        purchaseDiv.style.display = "block";
+        })
+    }
+    quantityInput.addEventListener("input", function(){
+      let itemPrice = parseInt(costOfProd.innerText.substr(7,4));
+      //console.log(costs);
+      totalSum = itemPrice*quantityInput.value;
+      totalOfProd.innerText = "Total: $" + totalSum;
+    })
+
+
+    let tableBody = document.getElementsByTagName("tbody")[0];
+    function order(){
+      let ProductRow = document.createElement('tr');
+      let ProductNameCell = document.createElement('td');
+      let ProductQuantityCell = document.createElement('td');
+      let ProductPriceCell = document.createElement('td');
+      let ProductTotalCell = document.createElement('td');
+      let DeleteButton = document.createElement('button');
+      ProductNameCell.innerText = itemName;
+      ProductQuantityCell.innerText = quantityInput.value;
+      ProductPriceCell.innerText = itemCost;
+      ProductTotalCell.innerText = "$"+totalSum;
+      DeleteButton.innerText = "Cancel";
+      DeleteButton.className = "btn btn-danger"
+      ProductRow.appendChild(ProductNameCell);
+      ProductRow.appendChild(ProductQuantityCell);
+      ProductRow.appendChild(ProductPriceCell);
+      ProductRow.appendChild(ProductTotalCell);
+      ProductRow.appendChild(DeleteButton);
+      tableBody.appendChild(ProductRow);
+      contentDiv.style = "";
+      contentPage.style.display ="block";
+      purchaseDiv.style.display = "none";
+      quantityInput.value = 0;
+      totalOfProd.innerText = "Total: $0";
+    }
+
+    //Checking Orders
+    let orderShow = false;
+    function showOrders(butn){
+      if(orderShow==false){
+      contentDiv.style.display ="none";
+      contentPage.style.display ="none";
+      purchaseDiv.style.display = "none";
+      ordersDiv.style.display = "block";
+      butn.innerText = "Exit";
+      butn.className = "btn btn-danger";
+      orderShow = true;
+      }else{
+        contentDiv.style.display ="";
+       ordersDiv.style.display = "none";
+        contentPage.style.display ="block";
+        butn.innerText = "Orders";
+        butn.className = "btn btn-success";
+        orderShow=false;
+      }
+    }
+
+    ordersDiv.addEventListener("click", function(e){
+    if(e.target.innerText == "Cancel"){
+        e.target.parentElement.remove();
+    }
+});
+
+    </script>
+</body>
+</html>
